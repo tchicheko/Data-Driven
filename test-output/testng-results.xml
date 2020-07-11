@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="11423" started-at="2020-07-10T14:32:42Z" finished-at="2020-07-10T14:32:53Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="11423" started-at="2020-07-10T14:32:42Z" finished-at="2020-07-10T14:32:53Z">
+      <class name="Practice.Data_Driven.addUser">
+        <test-method status="PASS" signature="inititialize()[pri:0, instance:Practice.Data_Driven.addUser@3c87521]" name="inititialize" is-config="true" duration-ms="6263" started-at="2020-07-10T16:32:42Z" finished-at="2020-07-10T16:32:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inititialize -->
+        <test-method status="FAIL" signature="addUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practice.Data_Driven.addUser@3c87521]" name="addUser" duration-ms="2307" started-at="2020-07-10T16:32:49Z" data-provider="getData" finished-at="2020-07-10T16:32:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FName1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[LName1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[User1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Pass1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Company AAA]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Admin@mail.com]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[082555]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [User1] but found [[[ChromeDriver: chrome on WINDOWS (e7a0f4739104ea7c1e8da2478ab34f97)] -> xpath: /html/body/table]]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [User1] but found [[[ChromeDriver: chrome on WINDOWS (e7a0f4739104ea7c1e8da2478ab34f97)] -> xpath: /html/body/table]]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
+	at Practice.Data_Driven.addUser.addUser(addUser.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUser -->
+        <test-method status="FAIL" signature="addUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practice.Data_Driven.addUser@3c87521]" name="addUser" duration-ms="1610" started-at="2020-07-10T16:32:52Z" data-provider="getData" finished-at="2020-07-10T16:32:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FName2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[LName2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[User2]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Pass2]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Company BBB]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Customer]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[cusomter@mail.com]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[082444]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [User2] but found [[[ChromeDriver: chrome on WINDOWS (e7a0f4739104ea7c1e8da2478ab34f97)] -> xpath: /html/body/table]]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [User2] but found [[[ChromeDriver: chrome on WINDOWS (e7a0f4739104ea7c1e8da2478ab34f97)] -> xpath: /html/body/table]]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
+	at Practice.Data_Driven.addUser.addUser(addUser.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUser -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Practice.Data_Driven.addUser@3c87521]" name="teardown" is-config="true" duration-ms="200" started-at="2020-07-10T16:32:53Z" finished-at="2020-07-10T16:32:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Practice.Data_Driven.addUser -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
