@@ -6,6 +6,7 @@
       <class name="Practice.Data_Driven.AppTest"/>
        <class name="Practice.Data_Driven.addUser"/>
         <class name="Practice.Data_Driven.excelUtility"/>
+         <class name="Practice.Data_Driven.dataProvider"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

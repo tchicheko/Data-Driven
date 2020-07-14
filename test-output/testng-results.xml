@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="11423" started-at="2020-07-10T14:32:42Z" finished-at="2020-07-10T14:32:53Z">
+  <suite name="Suite" duration-ms="39608" started-at="2020-07-11T18:08:44Z" finished-at="2020-07-11T18:09:23Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="11423" started-at="2020-07-10T14:32:42Z" finished-at="2020-07-10T14:32:53Z">
+    <test name="Test" duration-ms="39608" started-at="2020-07-11T18:08:44Z" finished-at="2020-07-11T18:09:23Z">
       <class name="Practice.Data_Driven.addUser">
-        <test-method status="PASS" signature="inititialize()[pri:0, instance:Practice.Data_Driven.addUser@3c87521]" name="inititialize" is-config="true" duration-ms="6263" started-at="2020-07-10T16:32:42Z" finished-at="2020-07-10T16:32:48Z">
+        <test-method status="PASS" signature="inititialize()[pri:0, instance:Practice.Data_Driven.addUser@17c1bced]" name="inititialize" is-config="true" duration-ms="8276" started-at="2020-07-11T20:08:44Z" finished-at="2020-07-11T20:08:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inititialize -->
-        <test-method status="FAIL" signature="addUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practice.Data_Driven.addUser@3c87521]" name="addUser" duration-ms="2307" started-at="2020-07-10T16:32:49Z" data-provider="getData" finished-at="2020-07-10T16:32:52Z">
+        <test-method status="FAIL" signature="addUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practice.Data_Driven.addUser@17c1bced]" name="addUser" duration-ms="15436" started-at="2020-07-11T20:08:55Z" data-provider="getData" finished-at="2020-07-11T20:09:10Z">
           <params>
             <param index="0">
               <value>
@@ -54,18 +54,44 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [User1] but found [[[ChromeDriver: chrome on WINDOWS (e7a0f4739104ea7c1e8da2478ab34f97)] -> xpath: /html/body/table]]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@class,'btn btn-success')]"}
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1F69PF7', ip: '192.168.88.188', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Tawanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:62581}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 97be7c76314f6ba0934b4105c1c31021
+*** Element info: {Using=xpath, value=//button[contains(@class,'btn btn-success')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [User1] but found [[[ChromeDriver: chrome on WINDOWS (e7a0f4739104ea7c1e8da2478ab34f97)] -> xpath: /html/body/table]]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:179)
-	at Practice.Data_Driven.addUser.addUser(addUser.java:95)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@class,'btn btn-success')]"}
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1F69PF7', ip: '192.168.88.188', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Tawanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:62581}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 97be7c76314f6ba0934b4105c1c31021
+*** Element info: {Using=xpath, value=//button[contains(@class,'btn btn-success')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.userListTable.getSubmitbutton(userListTable.java:104)
+	at Practice.Data_Driven.addUser.addUser(addUser.java:111)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -93,11 +119,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addUser -->
-        <test-method status="FAIL" signature="addUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practice.Data_Driven.addUser@3c87521]" name="addUser" duration-ms="1610" started-at="2020-07-10T16:32:52Z" data-provider="getData" finished-at="2020-07-10T16:32:53Z">
+        <test-method status="FAIL" signature="addUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practice.Data_Driven.addUser@17c1bced]" name="addUser" duration-ms="12343" started-at="2020-07-11T20:09:10Z" data-provider="getData" finished-at="2020-07-11T20:09:23Z">
           <params>
             <param index="0">
               <value>
@@ -140,18 +166,44 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [User2] but found [[[ChromeDriver: chrome on WINDOWS (e7a0f4739104ea7c1e8da2478ab34f97)] -> xpath: /html/body/table]]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@class,'btn btn-success')]"}
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1F69PF7', ip: '192.168.88.188', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Tawanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:62581}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 97be7c76314f6ba0934b4105c1c31021
+*** Element info: {Using=xpath, value=//button[contains(@class,'btn btn-success')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [User2] but found [[[ChromeDriver: chrome on WINDOWS (e7a0f4739104ea7c1e8da2478ab34f97)] -> xpath: /html/body/table]]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:179)
-	at Practice.Data_Driven.addUser.addUser(addUser.java:95)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@class,'btn btn-success')]"}
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1F69PF7', ip: '192.168.88.188', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Tawanda\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:62581}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 97be7c76314f6ba0934b4105c1c31021
+*** Element info: {Using=xpath, value=//button[contains(@class,'btn btn-success')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.userListTable.getSubmitbutton(userListTable.java:104)
+	at Practice.Data_Driven.addUser.addUser(addUser.java:111)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -179,11 +231,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addUser -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Practice.Data_Driven.addUser@3c87521]" name="teardown" is-config="true" duration-ms="200" started-at="2020-07-10T16:32:53Z" finished-at="2020-07-10T16:32:53Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Practice.Data_Driven.addUser@17c1bced]" name="teardown" is-config="true" duration-ms="713" started-at="2020-07-11T20:09:23Z" finished-at="2020-07-11T20:09:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

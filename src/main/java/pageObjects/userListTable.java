@@ -16,11 +16,18 @@ public class userListTable {
 	By password = By.xpath("//input[contains(@name,'Passwo')]");
 	By email = By.xpath("//input[contains(@name,'Emai')]");
 	By cellphone = By.xpath("//input[contains(@name,'Mobilepho')]");
-	By submit = By.xpath("/html/body/div[3]/div[3]/button[2]");
+	//By submit = By.xpath("//button[contains(text(),'Save')]");
+	//By submit = By.xpath("//button[@class='btn btn-success']");
+	//By submit = By.cssSelector("button[class='btn btn-success']");
+	
+	By submit = By.xpath("//button[contains(@class,'btn btn-success')]");
+	
 	By companyAAA = By.xpath("//input[@value='15']");
 	By companyBBB = By.xpath("//input[@value='16']");
 	By tableHeader = By.xpath("/html/body/table/thead/tr[3]");
-	By table = By.xpath("/html/body/table");
+	By table = By.xpath("//table[@class='smart-table table table-striped']");
+	By addUserModal = By.xpath("//form[@name='smartTableValidForm']");
+	//By submit = By.xpath("/html/body/div[3]/div[3]/button[1]");
 	
 	
 	//Constructor for the class object
@@ -28,6 +35,13 @@ public class userListTable {
 		
 		this.driver=driver;
 	}
+	
+	//Getting addUserModal  Element 		
+	public WebElement addUserModal() {
+		
+			return driver.findElement(addUserModal);
+	}
+
 	
 	//Getting Table  Element 		
 			public WebElement getTable() {

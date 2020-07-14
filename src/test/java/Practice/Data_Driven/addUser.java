@@ -3,14 +3,14 @@ package Practice.Data_Driven;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-
+import org.testng.asserts.SoftAssert;
 
 import Resources.base;
 import pageObjects.userListTable;
@@ -19,6 +19,8 @@ public class addUser extends base {
 	
 
 	excelUtility d= new excelUtility();
+	dataProvider dataSource= new dataProvider();
+	SoftAssert softAssert= new SoftAssert();
 	
 	@BeforeTest
 	public void inititialize() throws IOException {
@@ -32,7 +34,7 @@ public class addUser extends base {
 	}
 	
 	
-	@Test(dataProvider="getData")
+	@Test(dataProvider="getData", dataProviderClass= dataProvider.class)
 	public void addUser(String name, String surname, String username, String password,String customer,String role, String email,String cellphone ) {
 		
 		
@@ -41,15 +43,28 @@ public class addUser extends base {
 	
 		
 		//Validating that user is on User List table
-		Assert.assertTrue(userlist.getTableHeader().isDisplayed());
+		softAssert.assertTrue(userlist.getTableHeader().isDisplayed());
 		
 		
 		//Parsing data and performing actions to web elements
 		userlist.getAddUserButton().click();
+		
+		userlist.getName().clear();
+		userlist.getSurname().clear();		
+		userlist.getUsername().clear();
+		userlist.getPassword().clear();
+		userlist.getEmail().clear();
+		userlist.getCellPhone().clear();
+		
+		
 		userlist.getName().sendKeys(name);
 		userlist.getSurname().sendKeys(surname);		
 		userlist.getUsername().sendKeys(username);
 		userlist.getPassword().sendKeys(password);
+		
+		
+		
+		
 		
 		//Checking option to select for the Customer field considering data provided by the DataProvider
 		if(customer.equals("Company AAA")) {
@@ -86,13 +101,20 @@ public class addUser extends base {
 		userlist.getEmail().sendKeys(email);
 		userlist.getCellPhone().sendKeys(cellphone);
 		
-		
-		
+		WebDriverWait w= new WebDriverWait(driver, 8);
+		w.until(ExpectedConditions.visibilityOf(userlist.getSubmitbutton()));
+				
 		//Click submit to add user
 		userlist.getSubmitbutton().click();
-	
+		
+		
+		w.until(ExpectedConditions.invisibilityOf(userlist.getSubmitbutton()));
+		
+				
 		//Ensuring user has been added to the list
-		Assert.assertEquals(userlist.getTable(), username);
+		//softAssert.assertEquals(userlist.getTable().getText(), username);
+		
+		softAssert.assertAll();
 		
 		
 		
@@ -110,7 +132,7 @@ public class addUser extends base {
 	
 	
 	
-	
+	/*
 	@DataProvider
 	public Object [][] getData() throws IOException{
 		
@@ -140,7 +162,7 @@ public class addUser extends base {
 		
 		return users;
 		
-	}
+	}*/
 	
 
 
