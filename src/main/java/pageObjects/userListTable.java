@@ -18,14 +18,14 @@ public class userListTable {
 	By cellphone = By.xpath("//input[contains(@name,'Mobilepho')]");
 	//By submit = By.xpath("//button[contains(text(),'Save')]");
 	//By submit = By.xpath("//button[@class='btn btn-success']");
-	//By submit = By.cssSelector("button[class='btn btn-success']");
+	By submit = By.cssSelector("button[class='btn btn-success']");
 	
-	By submit = By.xpath("//button[contains(@class,'btn btn-success')]");
+	//By submit = By.className("btn btn-danger");
 	
 	By companyAAA = By.xpath("//input[@value='15']");
 	By companyBBB = By.xpath("//input[@value='16']");
 	By tableHeader = By.xpath("/html/body/table/thead/tr[3]");
-	By table = By.xpath("//table[@class='smart-table table table-striped']");
+	By table = By.xpath("/html/body/table/tbody/tr[1]");
 	By addUserModal = By.xpath("//form[@name='smartTableValidForm']");
 	//By submit = By.xpath("/html/body/div[3]/div[3]/button[1]");
 	
