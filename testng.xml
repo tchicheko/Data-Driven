@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+
+<listeners>
+	<listener class-name="Practice.Data_Driven.Listeners"/>
+</listeners>
+
   <test thread-count="5" name="Test">
     <classes>
       <class name="Practice.Data_Driven.AppTest"/>
        <class name="Practice.Data_Driven.addUser"/>
         <class name="Practice.Data_Driven.excelUtility"/>
          <class name="Practice.Data_Driven.dataProvider"/>
+       
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

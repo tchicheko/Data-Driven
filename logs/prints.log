@@ -1,0 +1,9 @@
+22:13:35.852 [main] INFO  Resources.base - Driver initialised successfully
+22:13:37.618 [main] INFO  Resources.base - Application launched successfully
+22:13:42.693 [main] DEBUG Resources.base - Save button clicked
+22:13:43.953 [main] ERROR Resources.base - java.lang.AssertionError: The following asserts failed:
+	expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]
+22:13:46.802 [main] DEBUG Resources.base - Save button clicked
+22:13:47.782 [main] ERROR Resources.base - java.lang.AssertionError: The following asserts failed:
+	expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit],
+	expected [FName2 LName2 User2 Customer cusomter@mail.com 082444 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]

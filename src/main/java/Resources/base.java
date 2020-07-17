@@ -7,12 +7,13 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.apache.commons.io.FileUtils;
 
 public class base {
 	
@@ -48,6 +49,19 @@ public class base {
 		return driver;
 }
 	
+	public String takeScreenshot(String testName, WebDriver driver) throws IOException {
+		
+		
+		//add screenshot
+		TakesScreenshot ts= (TakesScreenshot) driver;
+		File src= ts.getScreenshotAs(OutputType.FILE);
+		String destinationFile= System.getProperty("user.dir")+"\\Screens\\"+ testName+".png";
+		FileUtils.copyFile(src, new File(destinationFile));
+		return destinationFile;
+	
+		
+		
+	}
 	
 
 }

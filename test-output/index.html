@@ -5,8 +5,8 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -136,8 +136,9 @@
                   <span class="parameters">(FName1, LName1, User1, Pass1, Company AAA, Admin, Admin@mail.com, 082555)</span>
                   <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
 	expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]
-	at Practice.Data_Driven.addUser.addUser(addUser.java:118)
-... Removed 26 stack frames
+	at Practice.Data_Driven.addUser.addUser(addUser.java:136)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -150,8 +151,9 @@
                   <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
 	expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit],
 	expected [FName2 LName2 User2 Customer cusomter@mail.com 082444 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]
-	at Practice.Data_Driven.addUser.addUser(addUser.java:118)
-... Removed 26 stack frames
+	at Practice.Data_Driven.addUser.addUser(addUser.java:136)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -165,8 +167,11 @@
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Practice.Data_Driven.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Practice.Data_Driven.AppTest&quot;/&gt;
@@ -216,16 +221,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'addUser')
 data.setCell(0, 2, 'Practice.Data_Driven.addUser')
-data.setCell(0, 3, 4337);
+data.setCell(0, 3, 5243);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'addUser')
 data.setCell(1, 2, 'Practice.Data_Driven.addUser')
-data.setCell(1, 3, 3323);
+data.setCell(1, 3, 3271);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -260,17 +265,17 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">addUser(FName1, LName1, User1, Pass1, Company AAA, Admin, Admin@mail.com, 082555)</span>
-                <span class="method-start">8269 ms</span>
+                <span class="method-start">9947 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">addUser(FName2, LName2, User2, Pass2, Company BBB, Customer, cusomter@mail.com, 082444)</span>
-                <span class="method-start">12612 ms</span>
+                <span class="method-start">15760 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">15939 ms</span>
+                <span class="method-start">19533 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

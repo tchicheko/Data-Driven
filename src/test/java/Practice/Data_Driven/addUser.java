@@ -3,7 +3,10 @@ package Practice.Data_Driven;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -13,33 +16,47 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 import Resources.base;
 import pageObjects.userListTable;
+import Practice.Data_Driven.Listeners;
 
 public class addUser extends base {
 	
-
+	public static Logger log = LogManager.getLogger(base.class.getName());
 	excelUtility d= new excelUtility();
 	dataProvider dataSource= new dataProvider();
-	SoftAssert softAssert= new SoftAssert();
+	public SoftAssert softAssert;
+	public WebDriver driver;
+	
+	
+	int count=1;
+	
 	
 	@BeforeTest
 	public void inititialize() throws IOException {
 		
 		//Webdriver initialization
 		driver= initializeDriver();
+		log.info("Driver initialised successfully");
 	
 		
 		driver.get(prop.getProperty("url"));
-	
+		log.info("Application launched successfully");
+		
+		softAssert= new SoftAssert();
+		
+			
 	}
 	
 	
 	@Test(dataProvider="getData", dataProviderClass= dataProvider.class)
 	public void addUser(String name, String surname, String username, String password,String customer,String role, String email,String cellphone ) {
 		
-		
-		//Creating object for pageObject model  userListTable class
+				
+			//Creating object for pageObject model  userListTable class
 		userListTable userlist= new userListTable(driver);
 	
 		
@@ -107,7 +124,7 @@ public class addUser extends base {
 		w.until(ExpectedConditions.visibilityOf(userlist.getSubmitbutton()));
 		
 		userlist.getSubmitbutton().click();
-		
+		log.debug("Save button clicked");
 		w.until(ExpectedConditions.visibilityOf(userlist.getAddUserButton()));
 		driver.navigate().refresh();
 		
@@ -115,86 +132,10 @@ public class addUser extends base {
 		//Ensuring user has been added to the list
 		softAssert.assertEquals(userlist.getTable().getText(), name+" "+ surname+" "+ username+" "+ role+" "+ email+" "+ cellphone+" "+ "Edit"   );
 		
-		softAssert.assertAll();
-		
-		
-	
-		
-		/*
-		userlist.getName().clear();
-		userlist.getSurname().clear();		
-		userlist.getUsername().clear();
-		userlist.getPassword().clear();
-		userlist.getEmail().clear();
-		userlist.getCellPhone().clear();
-		
-		
-		userlist.getName().sendKeys(name);
-		userlist.getSurname().sendKeys(surname);		
-		userlist.getUsername().sendKeys(username);
-		userlist.getPassword().sendKeys(password);
-		
-		
-		
-		
-		
-		//Checking option to select for the Customer field considering data provided by the DataProvider
-		if(customer.equals("Company AAA")) {
-			
-			userlist.getCompanyAAA().click();
-		
-			
-		}
-		else {
-			
-			userlist.getCompanyBBB().click();
-		
-			
-		}
-		
-		//Checking option to select for the Role field considering data provided by the DataProvider
-		if(role.equals("Sales Team")) {
-			
-			userlist.getRole().selectByValue("0");
-			}
-		
-			else if(role.equals("Customer")){
-				
-				userlist.getRole().selectByValue("1");
-				
-			}
-		
-			else if(role.equals("Admin")){
-				
-				userlist.getRole().selectByValue("2");
-			}
-		
-		//Parsing data and performing actions to web elements
-		userlist.getEmail().sendKeys(email);
-		userlist.getCellPhone().sendKeys(cellphone);
-		
-		WebDriverWait w= new WebDriverWait(driver, 8);
-		w.until(ExpectedConditions.visibilityOf(userlist.getSubmitbutton()));
-		
-		//iframe
-		
-		//driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[title='Zendesk Chat widget window']")));
-		
-		
-		//Click submit to add user
-		userlist.getSubmitbutton().click();
-		
-		
-		w.until(ExpectedConditions.invisibilityOf(userlist.getSubmitbutton()));
-		
-				
-		//Ensuring user has been added to the list
-		//softAssert.assertEquals(userlist.getTable().getText(), username);
 		
 		softAssert.assertAll();
 		
-		*/
-		
+			
 	}
 	
 	//Closing the browser

@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="16118" started-at="2020-07-16T20:54:26Z" finished-at="2020-07-16T20:54:43Z">
+  <suite name="Suite" duration-ms="19831" started-at="2020-07-17T22:13:28 CAT" finished-at="2020-07-17T22:13:48 CAT">
     <groups>
     </groups>
-    <test name="Test" duration-ms="16118" started-at="2020-07-16T20:54:26Z" finished-at="2020-07-16T20:54:43Z">
+    <test name="Test" duration-ms="19831" started-at="2020-07-17T22:13:28 CAT" finished-at="2020-07-17T22:13:48 CAT">
       <class name="Practice.Data_Driven.addUser">
-        <test-method status="PASS" signature="inititialize()[pri:0, instance:Practice.Data_Driven.addUser@17c1bced]" name="inititialize" is-config="true" duration-ms="6830" started-at="2020-07-16T22:54:26Z" finished-at="2020-07-16T22:54:33Z">
+        <test-method status="PASS" signature="inititialize()[pri:0, instance:Practice.Data_Driven.addUser@26b3fd41]" name="inititialize" is-config="true" duration-ms="8880" started-at="2020-07-17T22:13:28 CAT" finished-at="2020-07-17T22:13:37 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inititialize -->
-        <test-method status="FAIL" signature="addUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practice.Data_Driven.addUser@17c1bced]" name="addUser" duration-ms="4337" started-at="2020-07-16T22:54:35Z" data-provider="getData" finished-at="2020-07-16T22:54:39Z">
+        <test-method status="FAIL" signature="addUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practice.Data_Driven.addUser@26b3fd41]" name="addUser" duration-ms="5243" started-at="2020-07-17T22:13:38 CAT" data-provider="getData" finished-at="2020-07-17T22:13:43 CAT">
           <params>
             <param index="0">
               <value>
@@ -57,45 +57,49 @@
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-	expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]]]>
+expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-	expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at Practice.Data_Driven.addUser.addUser(addUser.java:118)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at Practice.Data_Driven.addUser.addUser(addUser.java:136)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addUser -->
-        <test-method status="FAIL" signature="addUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practice.Data_Driven.addUser@17c1bced]" name="addUser" duration-ms="3323" started-at="2020-07-16T22:54:39Z" data-provider="getData" finished-at="2020-07-16T22:54:42Z">
+        <test-method status="FAIL" signature="addUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Practice.Data_Driven.addUser@26b3fd41]" name="addUser" duration-ms="3271" started-at="2020-07-17T22:13:44 CAT" data-provider="getData" finished-at="2020-07-17T22:13:47 CAT">
           <params>
             <param index="0">
               <value>
@@ -141,47 +145,51 @@
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-	expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit],
-	expected [FName2 LName2 User2 Customer cusomter@mail.com 082444 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]]]>
+expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit],
+expected [FName2 LName2 User2 Customer cusomter@mail.com 082444 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-	expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit],
-	expected [FName2 LName2 User2 Customer cusomter@mail.com 082444 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at Practice.Data_Driven.addUser.addUser(addUser.java:118)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+expected [FName1 LName1 User1 Admin Admin@mail.com 082555 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit],
+expected [FName2 LName2 User2 Customer cusomter@mail.com 082444 Edit] but found [Tom Blue matt Company BBB Customer matt@comp.com 111222333 Edit]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at Practice.Data_Driven.addUser.addUser(addUser.java:136)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addUser -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Practice.Data_Driven.addUser@17c1bced]" name="teardown" is-config="true" duration-ms="170" started-at="2020-07-16T22:54:42Z" finished-at="2020-07-16T22:54:43Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:Practice.Data_Driven.addUser@26b3fd41]" name="teardown" is-config="true" duration-ms="290" started-at="2020-07-17T22:13:48 CAT" finished-at="2020-07-17T22:13:48 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
